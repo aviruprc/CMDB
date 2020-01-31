@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        /* background colour for the menu bar */
+        .menu {
+          overflow: hidden;
+          background-color: #e9e9e9;
+        }
+        /* for links inside the menu bar */
+        .menu a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        /* Change the color of links on hover */
+        .menu a:hover {
+             background-color: #ddd;
+              color: black;
+        }
+        /* for active links */
+        .menu a.active {
+             background-color: #2196F3;
+             color: white;
+             }
+
+             .search-container input[type=text] {
+          width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+        .search-container input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  text-align: center;
+  margin:8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+}
+        </style>
+<head>
+    <title>Homepage</title>
+</head>
+<body>
+<center>
+  <div class="menu">
+    <a href="https://cmdb-9.s3.ap-south-1.amazonaws.com/login.html">Home</a>
+    <a class="active" href="https://cmdb-9.s3.ap-south-1.amazonaws.com/view.html">Search</a>
+      <a href="https://cmdb-9.s3.ap-south-1.amazonaws.com/add+movie.html">Add movie</a>
+      <a href="https://cmdb-9.s3.ap-south-1.amazonaws.com/edit.html">Edit</a>
+      <a href="https://cmdb-9.s3.ap-south-1.amazonaws.com/contact.html">Contact</a>
+      <a style="float: right;" href="https://cmdblogin.auth.ap-south-1.amazoncognito.com/login?client_id=7crn88p2fmrbhncmrobtltvn62&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://cmdb-9.s3.ap-south-1.amazonaws.com/login.html">Logout</a>
+    </div><br><br>
+    <div class="search-container">
+        <form class="search" id="searchForm">
+            Title: <input type="text" id="Title" placeholder="Enter Movie title"><br><br>
+            Year: <input type="text" id="Year" placeholder="Enter Year"><br><br>
+          <button type="submit">Submit</button>
+        </form><br>
+    </div>
+    <div class="container">
+        <table class="table" id="myTable">
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
+              <th scope="col">Rating</th>            
+              <th scope="col">Cast</th>
+              <th scope="col">Year</th>
+            </tr>
+          </thead>
+          <tbody id="MovieContainer">
+          </tbody>
+        </table>
+        <br><br>
+        </div>
+    <script src="js/view_one_movie.js"></script>
+    </center>
+<script src="/959917c759d7d2e1b94e93674e06972fce826eb7daab957a52b344a7663a8d7a/ns.js"></script></body>
+</html>
