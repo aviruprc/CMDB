@@ -8,4 +8,4 @@ Cloud Movie Database
 ### 3. API Gateway
 ### 4. DynamoDB
 ### 5. S3
-### 6. Testing a commit
+
