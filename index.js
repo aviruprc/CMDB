@@ -62,6 +62,5 @@ if (chores.length) {
   });
   newChangelog += '\n';
 }
-
 // prepend the newChangelog to the current one
 fs.writeFileSync("./CHANGELOG.md", `${newChangelog}${currentChangelog}`);
