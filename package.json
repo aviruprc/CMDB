@@ -1,3 +1,10 @@
 {
-  "version": "3"
+  "name": "my-awesome-package",
+  "version": "1.0.0",
+  "devDependencies": {
+    "auto-changelog": "*"
+  },
+  "scripts": {
+    "version": "auto-changelog -p && git add CHANGELOG.md"
+  }
 }
